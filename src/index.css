@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Oness Barber Shop Design System - Premium barbershop aesthetic */
+
+@layer base {
+  :root {
+    /* Primary brand colors */
+    --background: 20 14% 7%;
+    --foreground: 30 10% 95%;
+
+    /* Card colors */
+    --card: 20 14% 10%;
+    --card-foreground: 30 10% 95%;
+
+    /* Popover colors */
+    --popover: 20 14% 8%;
+    --popover-foreground: 30 10% 95%;
+
+    /* Primary gold accent */
+    --primary: 45 86% 58%;
+    --primary-foreground: 20 14% 7%;
+
+    /* Secondary colors */
+    --secondary: 20 14% 15%;
+    --secondary-foreground: 30 10% 90%;
+
+    /* Muted colors */
+    --muted: 20 14% 12%;
+    --muted-foreground: 30 5% 60%;
+
+    /* Accent colors */
+    --accent: 20 14% 15%;
+    --accent-foreground: 45 86% 58%;
+
+    /* Destructive colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Border and input */
+    --border: 20 14% 20%;
+    --input: 20 14% 12%;
+    --ring: 45 86% 58%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(20 14% 7%), hsl(20 14% 12%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 86% 58%), hsl(42 87% 65%));
+    --gradient-card: linear-gradient(180deg, hsl(20 14% 10%), hsl(20 14% 8%));
+
+    /* Shadows */
+    --shadow-gold: 0 4px 20px hsl(45 86% 58% / 0.3);
+    --shadow-elegant: 0 10px 40px hsl(20 14% 4% / 0.6);
+    --shadow-card: 0 4px 12px hsl(20 14% 4% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Sidebar */
+    --sidebar-background: 20 14% 8%;
+    --sidebar-foreground: 30 10% 90%;
+    --sidebar-primary: 45 86% 58%;
+    --sidebar-primary-foreground: 20 14% 7%;
+    --sidebar-accent: 20 14% 12%;
+    --sidebar-accent-foreground: 30 10% 90%;
+    --sidebar-border: 20 14% 20%;
+    --sidebar-ring: 45 86% 58%;
+  }
+
+  .light {
+    /* Light mode - premium barbershop with gold accents */
+    --background: 30 10% 98%;
+    --foreground: 20 14% 15%;
+    --card: 30 5% 96%;
+    --card-foreground: 20 14% 15%;
+    --popover: 30 5% 98%;
+    --popover-foreground: 20 14% 15%;
+    --primary: 45 86% 55%;
+    --primary-foreground: 30 10% 98%;
+    --secondary: 30 5% 92%;
+    --secondary-foreground: 20 14% 15%;
+    --muted: 30 5% 94%;
+    --muted-foreground: 20 8% 45%;
+    --accent: 30 5% 92%;
+    --accent-foreground: 45 86% 55%;
+    --border: 30 5% 88%;
+    --input: 30 5% 92%;
+    --ring: 45 86% 55%;
+    --gradient-hero: linear-gradient(135deg, hsl(30 10% 98%), hsl(30 5% 94%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 86% 55%), hsl(42 87% 60%));
+    --gradient-card: linear-gradient(180deg, hsl(30 5% 96%), hsl(30 5% 98%));
+    --shadow-gold: 0 4px 20px hsl(45 86% 55% / 0.2);
+    --shadow-elegant: 0 10px 40px hsl(20 14% 15% / 0.1);
+    --shadow-card: 0 4px 12px hsl(20 14% 15% / 0.08);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-lg;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/80;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .gold-gradient {
+    background: var(--gradient-gold);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+}
